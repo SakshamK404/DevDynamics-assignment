@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="app-footer">
       <p>
-        Copyright © 2024 All Rights Reserved, A creation by Saksham Kapadnis
+        Copyright © 2024 All Rights Reserved, Crafted by Saksham Kapadnis
         <a href="https://www.linkedin.com/in/kapadnis-saksham-821213289/" target="_blank" rel="noopener noreferrer" className="icon">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
