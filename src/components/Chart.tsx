@@ -1,4 +1,4 @@
-// src/components/Chart.tsx
+
 
 import React from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid, ResponsiveContainer } from "recharts";
@@ -21,7 +21,7 @@ const Chart: React.FC<Props> = ({ data }) => {
           <Tooltip />
           <Legend />
           <Bar dataKey="value" fill="#8884d8" name="Activity Value" />
-          {/* Add more bars if needed for other activities */}
+          {}
         </BarChart>
       </ResponsiveContainer>
     </div>

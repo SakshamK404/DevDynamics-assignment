@@ -1,4 +1,4 @@
-// src/components/ActiveDaysGraph.tsx
+
 
 import React from "react";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
@@ -12,7 +12,7 @@ const ActiveDaysGraph: React.FC<ActiveDaysGraphProps> = ({ data }) => {
   const insightData = data.insight.map((insight, index) => ({
     insight,
     index,
-    days: data.days // Assuming you want to use the days property for the bars
+    days: data.days 
   }));
 
   return (

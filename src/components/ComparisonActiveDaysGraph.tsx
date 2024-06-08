@@ -1,15 +1,13 @@
-// src/components/ComparisonActiveDaysGraph.tsx
+
 
 import React from "react";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { AuthorWorklogRow } from "../types";
 
-// Function to capitalize the first letter of a string
 const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-// Function to format email into name
 const formatNameFromEmail = (email: string) => {
   const name = email.split("@")[0];
   return capitalizeFirstLetter(name);
@@ -25,7 +23,7 @@ const ComparisonActiveDaysGraph: React.FC<ComparisonActiveDaysGraphProps> = ({ d
     const record = data.find(record => record.name === email);
     return {
       email,
-      name: formatNameFromEmail(email), // Format the name
+      name: formatNameFromEmail(email),
       activeDays: record ? record.activeDays.days : 0
     };
   });

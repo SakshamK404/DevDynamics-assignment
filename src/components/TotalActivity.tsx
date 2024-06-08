@@ -1,4 +1,3 @@
-// src/components/TotalActivities.tsx
 
 import React from "react";
 import {
@@ -20,9 +19,8 @@ interface Props {
 }
 
 const TotalActivities: React.FC<Props> = ({ totalActivity, name }) => {
-  console.log(totalActivity);
+  
 
-  // Calculate the maximum value in the totalActivity array
   const maxValue = Math.max(...totalActivity.map((d) => Number(d.value)));
 
   const capitalizeAndBoldFirstWord = (str: string) => {

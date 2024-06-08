@@ -1,8 +1,8 @@
-/* src/components/Footer.css */
+
 
 .app-footer {
-    background-color: #5da5ed; /* Footer background color */
-    color: #ffffff; /* Footer text color */
+    background-color: #5da5ed; 
+    color: #ffffff; 
     padding: 10px 20px;
     text-align: center;
     bottom: 0;
@@ -28,15 +28,14 @@
   }
   
   .icon:hover {
-    color: #0077b5; /* LinkedIn brand color */
+    color: #0077b5; 
   }
-  
-  /* Different hover colors for GitHub and Gmail icons */
+ 
   .icon:nth-of-type(2):hover {
-    color: #333; /* GitHub brand color */
+    color: #333;
   }
   
   .icon:nth-of-type(3):hover {
-    color: #d14836; /* Gmail brand color */
+    color: #d14836;
   }
   

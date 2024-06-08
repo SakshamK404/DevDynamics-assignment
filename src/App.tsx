@@ -5,12 +5,16 @@ import TotalActivities from "./components/TotalActivity";
 import ActiveDaysGraph from "./components/ActiveDaysGraph";
 import ComparisonActiveDaysGraph from "./components/ComparisonActiveDaysGraph";
 import ComparisonTotalActivityGraph from "./components/ComparisonTotalActivityGraph";
-import { AuthorWorklogRow, RootObject, DayWiseActivityItem } from "./types";
-import "./App.css";
 import SecondaryHeader from "./components/SecondaryHeader";
-import Footer from "./components/Footer"; // Import Footer
+import Footer from "./components/Footer";
+import { AuthorWorklogRow, RootObject, DayWiseActivityItem } from "./types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTachometerAlt, faChartBar, faCalendarDay, faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTachometerAlt,
+  faChartBar,
+  faCalendarDay,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   LineChart,
   Line,
@@ -21,6 +25,8 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+
+import "./App.css";
 
 const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -90,7 +96,12 @@ const App: React.FC = () => {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="count" stroke="#8884d8" activeDot={{ r: 8 }} />
+              <Line
+                type="monotone"
+                dataKey="count"
+                stroke="#8884d8"
+                activeDot={{ r: 8 }}
+              />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -154,7 +165,10 @@ const App: React.FC = () => {
           <>
             <SecondaryHeader title="Dashboard" />
             <div className="wrapper">
-              <ComparisonActiveDaysGraph data={records} emails={selectedEmails} />
+              <ComparisonActiveDaysGraph
+                data={records}
+                emails={selectedEmails}
+              />
             </div>
             <div className="wrapper">
               <ComparisonTotalActivityGraph data={records} />
@@ -170,25 +184,31 @@ const App: React.FC = () => {
         <h1>Activity Dashboard</h1>
       </header>
       <div className="content-container">
-        <div className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
-          <div className="toggle-button" onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}>
+        <div className={`sidebar ${isSidebarCollapsed ? "collapsed" : ""}`}>
+          <div
+            className="toggle-button"
+            onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+          >
             <FontAwesomeIcon icon={faBars} />
           </div>
           <ul>
             <li onClick={() => setActiveSection("dashboard")}>
-              <FontAwesomeIcon icon={faTachometerAlt} /> {!isSidebarCollapsed && 'Dashboard'}
+              <FontAwesomeIcon icon={faTachometerAlt} />{" "}
+              {!isSidebarCollapsed && "Dashboard"}
             </li>
             <li onClick={() => setActiveSection("totalActivity")}>
-              <FontAwesomeIcon icon={faChartBar} /> {!isSidebarCollapsed && 'Total Activity'}
+              <FontAwesomeIcon icon={faChartBar} />{" "}
+              {!isSidebarCollapsed && "Total Activity"}
             </li>
             <li onClick={() => setActiveSection("dayWiseActivity")}>
-              <FontAwesomeIcon icon={faCalendarDay} /> {!isSidebarCollapsed && 'Day Wise Activity'}
+              <FontAwesomeIcon icon={faCalendarDay} />{" "}
+              {!isSidebarCollapsed && "Day Wise Activity"}
             </li>
           </ul>
         </div>
         <div className="main-content">{renderSection()}</div>
       </div>
-      <Footer /> {/* Add the Footer component */}
+      <Footer /> {}
     </div>
   );
 };

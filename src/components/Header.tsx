@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 
 import React from "react";
 import { AppBar, Toolbar, Typography } from "@mui/material";
