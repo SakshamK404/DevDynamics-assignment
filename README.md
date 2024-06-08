@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+# Activity Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Activity Dashboard is a React application that provides an interactive interface for visualizing and analyzing user activity data. It includes features such as total activity summaries, day-wise activity graphs, and comparative analysis across different users. The dashboard is designed with a user-friendly interface, including a fixed header and footer, a sidebar for navigation, and various data visualization components.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Dashboard View**: Provides a comparative view of active days and total activity across selected users.
+- **Total Activity View**: Displays the total activity of a selected user, with options to filter by email.
+- **Day Wise Activity View**: Shows detailed day-wise activity graphs for a selected user.
+- **Responsive Design**: Ensures a seamless experience across different devices and screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **TotalActivities**: Displays the total activity of a user.
+- **ActiveDaysGraph**: Visualizes the active days of a user.
+- **ComparisonActiveDaysGraph**: Compares active days across multiple users.
+- **ComparisonTotalActivityGraph**: Compares total activity across multiple users.
+- **SecondaryHeader**: Displays a secondary header for different sections.
 
-### `npm test`
+## Data Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The data is structured as follows:
 
-### `npm run build`
+- **AuthorWorklogRow**: Represents a user's worklog with details like name, total activity, day-wise activity, and active days.
+- **DayWiseActivity**: Contains date-wise activity data with activity items.
+- **ActiveDays**: Represents the active days of a user, including burnout status and insights.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Styling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application uses a custom CSS file (`App.css`) for styling. Key styling features include:
+- Fixed header and footer
+- Sidebar navigation
+- Responsive design for various screen sizes
+- Hover effects for enhanced interactivity
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/activity-dashboard.git
+    cd activity-dashboard
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Run the application**:
+    ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **react**: Frontend library for building the user interface.
+- **react-select**: For creating dropdown menus.
+- **recharts**: For creating responsive charts.
+- **@fortawesome/react-fontawesome**: For using FontAwesome icons.
+- **@fortawesome/free-brands-svg-icons**: For brand-specific icons like LinkedIn, GitHub, and Gmail.
 
-## Learn More
+## Icons and Footer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The footer contains social media and contact icons:
+- **LinkedIn**: [kapadnis-saksham-821213289](https://www.linkedin.com/in/kapadnis-saksham-821213289/)
+- **GitHub**: [SakshamK404](https://github.com/SakshamK404)
+- **Gmail**: [sakshamkaps411@gmail.com](mailto:sakshamkaps411@gmail.com)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Author
+
+Created by Saksham Kapadnis.
+
+
+Screenshots:
+![image](https://github.com/SakshamK404/DevDynamics-assignment/assets/94706568/1a20a75a-3ef8-440a-9d71-578ad9966b83)
+![image](https://github.com/SakshamK404/DevDynamics-assignment/assets/94706568/b964622c-1bd6-4cb1-bc1e-53837570c910)
+![image](https://github.com/SakshamK404/DevDynamics-assignment/assets/94706568/a8cf2dff-c720-4fe2-a15f-066e9c5b6a65)
+![image](https://github.com/SakshamK404/DevDynamics-assignment/assets/94706568/4dd86fc2-76c5-48d3-88fe-f7e4a3e7b98c)
+
+
+
